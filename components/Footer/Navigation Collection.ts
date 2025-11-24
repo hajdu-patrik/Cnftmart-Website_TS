@@ -30,7 +30,7 @@ export const navigatiocollection = [
     label: "Contact",
     hyperef1: "#footer",
     blank1: false,
-    link1: "Hajud10#1779",
+    link1: "anonimus#6969",
     hyperef2: "#footer",
     blank2: false,
     link2: "@cnftmart",

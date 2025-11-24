@@ -36,7 +36,6 @@
   }
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: var(#252627);
     border: 1px solid;
     transition: 0.5s;
     border-radius: 20px;
