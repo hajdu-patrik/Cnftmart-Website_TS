@@ -27,7 +27,7 @@ export const tyohcollection = [
     id: 5,
     title: "Airdrops for the holders",
     inside: true,
-    classNames: "mt-12",
+    classNames: "",
   },
   {
     id: 6,

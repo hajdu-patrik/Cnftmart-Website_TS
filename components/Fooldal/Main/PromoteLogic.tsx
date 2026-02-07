@@ -56,8 +56,7 @@ const PromoteLogic = () => {
                 draggable={false}
                 priority={true}
                 loading="eager"
-                className="inset-0 rotate-[2.4deg] rounded-[40px] border-[6px] border-white md:rounded-[45px]
-                  lg:rounded-[55px] lg:border-[7px] xl:rounded-[65px] xl:border-[8px] 2xl:rounded-[75px]"
+                className="inset-0 rotate-[2.4deg] rounded-[40px]"
                 alt={index.alt}
               />
             </a>

@@ -2,11 +2,14 @@ import { servicescollection } from "./Services Collection";
 import useLoading from "../../../common/LoadingHook";
 import { Transition } from "@headlessui/react";
 import React from "react";
+// EZ A SOR HIÁNYZOTT: Importáljuk a Twitter komponenst
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 const Services: React.FC = () => {
   //Transition betöltése
-  const { loading} = useLoading();
+  const { loading } = useLoading();
   const [transition, setTransition] = React.useState<boolean>(false);
+  
   React.useEffect(() => {
     if (loading) {
       setTransition(transition);
@@ -14,6 +17,7 @@ const Services: React.FC = () => {
       setTransition(!transition);
     }
   }, [loading]);
+
   return (
     <section id="services">
         <Transition
@@ -41,20 +45,22 @@ const Services: React.FC = () => {
               </ul>
             ))}
           </div>
-          <div className="mx-auto my-4 h-full w-full rounded-[23px] border-[10px] border-[#FED682]
-          sm:my-6 sm:h-auto sm:w-auto md:min-h-[800px] 2xl:mx-0 2xl:mr-10">
-            <a
-              className="twitter-timeline text-[0.7em] text-[#FDC757] text-center md:text-[0.8em] lg:text-[0.9em] xl:text-[1em] 2xl:text-[1.1em] rounded-[24px]"
-              data-tweet-limit="5"
-              data-chrome="noborders"
-              data-lang="en"
-              data-width="500"
-              data-height="800"
-              data-theme="light"
-              aria-label="twitter-posts"
-              href="https://twitter.com/cnftmart?ref_src=twsrc%5Etfw">
-              Tweets by cnftmart
-            </a>
+          
+          {/* Twitter Embed Szekció */}
+          <div className="flex justify-center md:justify-end xl:mr-10">
+            <div className="mt-10 md:mt-0 w-full max-w-[400px]">
+                <TwitterTimelineEmbed
+                    sourceType="profile"
+                    screenName="Microsoft" 
+                    options={{height: 400}}
+                    theme="dark"
+                    noHeader
+                    noFooter
+                    noBorders
+                    transparent
+                    placeholder={<div className="text-white text-center p-4">Loading...</div>} 
+                />
+            </div>
           </div>
         </Transition> 
     </section>

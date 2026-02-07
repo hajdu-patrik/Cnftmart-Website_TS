@@ -32,7 +32,7 @@ function CNFTMart({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Cnftmart</title>
+        <title className=" ">Cnftmart</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Transition

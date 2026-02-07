@@ -10,9 +10,9 @@ const TYOH: React.FC = () => {
           <div className="row-span-2">
             <Image
               src="/images/Detail1.png"
+              height={550}
+              width={550}
               priority={true}
-              height={500}
-              width={500}
               draggable={false}
               alt="detail"
             />
@@ -39,8 +39,8 @@ const TYOH: React.FC = () => {
             <Image
               src="/images/Detail2.png"
               priority={true}
-              height={500}
-              width={500}
+              height={750}
+              width={750}
               draggable={false}
               alt="detail2"
               className="pt-[10vw]"
